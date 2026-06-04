@@ -1,0 +1,331 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+
+}
+
+
+/* Main Body */
+
+body{
+
+background:#ffffff;
+color:#222;
+
+}
+
+
+
+/* Header */
+
+header{
+
+background:
+linear-gradient(135deg,#4267B2,#31549a);
+
+color:white;
+padding-bottom:80px;
+
+}
+
+
+
+/* Navigation */
+
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+
+}
+
+
+
+.logo{
+
+font-size:28px;
+font-weight:bold;
+color:white;
+
+}
+
+
+
+nav ul{
+
+display:flex;
+gap:30px;
+list-style:none;
+
+}
+
+
+nav ul li{
+
+cursor:pointer;
+
+}
+
+
+
+/* Hero Section */
+
+
+.hero{
+
+text-align:center;
+padding:100px 20px;
+
+}
+
+
+
+.hero h1{
+
+font-size:55px;
+max-width:850px;
+margin:auto;
+color:white;
+
+}
+
+
+
+.hero p{
+
+margin:25px auto;
+font-size:20px;
+max-width:700px;
+color:#f7f7f7;
+
+}
+
+
+
+.hero a{
+
+background:#F5D134;
+color:#222;
+padding:15px 35px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+
+.hero a:hover{
+
+background:white;
+color:#4267B2;
+
+}
+
+
+
+
+/* Common Sections */
+
+
+section{
+
+padding:70px 10%;
+text-align:center;
+
+}
+
+
+
+h2{
+
+font-size:38px;
+margin-bottom:25px;
+color:#4267B2;
+
+}
+
+
+
+.about p,
+.universities p{
+
+max-width:850px;
+margin:auto;
+line-height:1.7;
+font-size:18px;
+
+}
+
+
+
+
+/* Services Cards */
+
+
+#services{
+
+background:#f8faff;
+
+}
+
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+
+}
+
+
+
+.card{
+
+background:white;
+padding:35px;
+border-radius:20px;
+border-top:5px solid #F5D134;
+box-shadow:0 10px 30px rgba(66,103,178,0.15);
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(66,103,178,0.25);
+
+}
+
+
+
+.card h3{
+
+color:#4267B2;
+margin-bottom:15px;
+
+}
+
+
+
+.card p{
+
+line-height:1.6;
+
+}
+
+
+
+
+/* University Section */
+
+
+.universities{
+
+background:white;
+
+}
+
+
+
+
+/* CTA Section */
+
+
+.cta{
+
+background:#4267B2;
+color:white;
+
+}
+
+
+
+.cta h2{
+
+color:white;
+
+}
+
+
+
+.cta p{
+
+font-size:20px;
+margin-bottom:25px;
+
+}
+
+
+
+
+button{
+
+background:#F5D134;
+color:#222;
+padding:15px 40px;
+border:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+background:white;
+color:#4267B2;
+
+}
+
+
+
+
+/* Footer */
+
+
+footer{
+
+padding:25px;
+text-align:center;
+background:#31549a;
+color:white;
+
+}
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:700px){
+
+
+.hero h1{
+
+font-size:35px;
+
+}
+
+
+nav ul{
+
+display:none;
+
+}
+
+
+}
