@@ -1,16 +1,17 @@
 /* ==========================================================================
-   CareerXcelerator Brand System Configuration
-   Primary Canvas: #4267B2 (Blue) | Core Accent: #F5D134 (Yellow)
+   CareerXcelerator Strict Brand System Configuration
+   Primary Canvas: #4267B2 (Blue) | Core Accent: #F5D134 (Yellow) | Base: White
    ========================================================================== */
 
 :root {
     --brand-blue: #4267B2;
     --brand-yellow: #F5D134;
-    --dark-canvas: #0E1A34; /* Richer background variant of dark blue for depth */
-    --surface-card: #18284E; /* Lighter surface blue for elevated components */
-    --text-primary: #FFFFFF;
-    --text-muted: #B3C5E7;
-    --border-color: rgba(66, 103, 178, 0.3);
+    --brand-white: #FFFFFF;
+    --dark-canvas: #1A2E56; /* A slightly darker, premium navy variant of your brand blue for text contrast */
+    --surface-card: #F8FAFC; /* Clean white/light gray surface for structural cards */
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+    --border-color: rgba(66, 103, 178, 0.2);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -28,8 +29,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--dark-canvas);
-    color: var(--text-primary);
+    background-color: var(--brand-white);
+    color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -42,7 +43,7 @@ body {
 }
 
 .text-center { text-align: center; }
-h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; color: var(--brand-blue); }
 
 /* Reusable UI Components & Buttons */
 .btn {
@@ -61,7 +62,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 .btn-primary {
     background-color: var(--brand-blue);
-    color: var(--text-primary);
+    color: var(--brand-white);
 }
 
 .btn-primary:hover {
@@ -71,23 +72,24 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 .btn-secondary {
     background-color: var(--brand-yellow);
-    color: #0E1A34;
+    color: var(--dark-canvas);
 }
 
 .btn-secondary:hover {
     background-color: #E2BF2B;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(245, 209, 52, 0.3);
+    box-shadow: 0 4px 15px rgba(245, 209, 52, 0.4);
 }
 
 .btn-outline {
     background-color: transparent;
-    border-color: var(--text-primary);
-    color: var(--text-primary);
+    border: 2px solid var(--brand-blue);
+    color: var(--brand-blue);
 }
 
 .btn-outline:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--brand-blue);
+    color: var(--brand-white);
 }
 
 .btn-large {
@@ -98,9 +100,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .badge {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background-color: rgba(66, 103, 178, 0.2);
+    background-color: rgba(66, 103, 178, 0.1);
     border: 1px solid var(--brand-blue);
-    color: var(--text-primary);
+    color: var(--brand-blue);
     border-radius: 50px;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -110,9 +112,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .accent-badge {
-    background-color: rgba(245, 209, 52, 0.1);
-    border-color: var(--brand-yellow);
-    color: var(--brand-yellow);
+    background-color: rgba(245, 209, 52, 0.15);
+    border-color: #DAB51C;
+    color: #A68608;
 }
 
 .section-header {
@@ -134,7 +136,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 /* Header Area Styling */
 .main-header {
-    background-color: rgba(14, 26, 52, 0.85);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
@@ -165,12 +167,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .logo-text {
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: var(--brand-blue);
     letter-spacing: -0.5px;
 }
 
 .logo-text span {
-    color: var(--brand-yellow);
+    color: #DAB51C; /* Darker yellow accent for readability against white logos */
 }
 
 .main-nav {
@@ -188,12 +190,13 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .nav-link:hover {
-    color: var(--brand-yellow);
+    color: var(--brand-blue);
 }
 
-/* Hero Section layout */
+/* Hero Section Layout */
 .hero-section {
     padding: 6rem 0;
+    background: linear-gradient(135deg, rgba(66, 103, 178, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -208,6 +211,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
     font-size: 3.5rem;
     letter-spacing: -1.5px;
     margin-bottom: 1.5rem;
+    color: var(--brand-blue);
 }
 
 .hero-content p {
@@ -223,12 +227,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 /* Premium Aesthetic Cards & Mock Visuals */
 .abstract-card {
-    background-color: var(--surface-card);
-    border: 1px solid var(--border-color);
+    background-color: var(--brand-blue);
     border-radius: 12px;
     padding: 2.5rem;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(66, 103, 178, 0.15);
+    color: var(--brand-white);
+}
+
+.abstract-card h3 {
+    color: var(--brand-white);
 }
 
 .card-header-accent {
@@ -237,13 +245,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
     left: 0;
     right: 0;
     height: 4px;
-    background-color: var(--brand-blue);
+    background-color: var(--brand-yellow);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-}
-
-.card-header-accent.secondary {
-    background-color: var(--brand-yellow);
 }
 
 .metric-icon {
@@ -255,7 +259,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .progress-bar-container {
     width: 100%;
     height: 6px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     margin-top: 1.5rem;
     overflow: hidden;
@@ -270,7 +274,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 /* Philosophy Section Layout */
 .philosophy-section {
     padding: 5rem 0;
-    background-color: rgba(24, 40, 78, 0.3);
+    background-color: var(--brand-white);
 }
 
 .philosophy-grid {
@@ -284,17 +288,17 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
     background-color: var(--surface-card);
     padding: 2.5rem;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid var(--border-color);
 }
 
 .text-card h3 {
     margin-bottom: 1rem;
-    color: var(--brand-yellow);
+    color: var(--brand-blue);
 }
 
 /* Strategic Comparison Grid Layout */
 .comparison-container {
-    background-color: rgba(14, 26, 52, 0.6);
+    background-color: var(--surface-card);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 3rem;
@@ -304,6 +308,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.8rem;
+    color: var(--brand-blue);
 }
 
 .comparison-grid {
@@ -315,25 +320,23 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 .comp-box {
     padding: 2rem;
     border-radius: 8px;
-}
-
-.comp-box.legacy {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255,255,255,0.05);
+    background-color: var(--brand-white);
+    border: 1px solid var(--border-color);
 }
 
 .comp-box.ecosystem {
-    background-color: rgba(66, 103, 178, 0.1);
-    border: 1px solid var(--brand-blue);
+    border: 2px solid var(--brand-blue);
+    background-color: rgba(66, 103, 178, 0.02);
 }
 
 .comp-box h4 {
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
+    color: var(--text-dark);
 }
 
 .comp-box.ecosystem h4 {
-    color: var(--brand-yellow);
+    color: var(--brand-blue);
 }
 
 .comp-box ul {
@@ -345,14 +348,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
     display: flex;
     gap: 0.75rem;
     align-items: flex-start;
+    color: var(--text-muted);
 }
 
 .comp-box.legacy i { color: #E74C3C; margin-top: 4px; }
-.comp-box.ecosystem i { color: var(--brand-yellow); margin-top: 4px; }
+.comp-box.ecosystem i { color: var(--brand-blue); margin-top: 4px; }
 
 /* Audience Section Grid */
 .audience-section {
     padding: 5rem 0;
+    background-color: rgba(66, 103, 178, 0.02);
 }
 
 .audience-grid {
@@ -362,7 +367,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .audience-card {
-    background-color: var(--surface-card);
+    background-color: var(--brand-white);
     border: 1px solid var(--border-color);
     padding: 2rem;
     border-radius: 8px;
@@ -371,18 +376,20 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 .audience-card:hover {
     transform: translateY(-5px);
-    border-color: var(--brand-yellow);
+    border-color: var(--brand-blue);
+    box-shadow: 0 10px 20px rgba(66, 103, 178, 0.05);
 }
 
 .aud-icon {
     font-size: 2rem;
-    color: var(--brand-yellow);
+    color: var(--brand-blue);
     margin-bottom: 1.25rem;
 }
 
 .audience-card h3 {
     margin-bottom: 0.75rem;
     font-size: 1.3rem;
+    color: var(--brand-blue);
 }
 
 .audience-card p {
@@ -393,7 +400,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 /* Services Pipeline & Block Layout */
 .services-section {
     padding: 5rem 0;
-    background-color: rgba(24, 40, 78, 0.3);
+    background-color: var(--brand-white);
 }
 
 .services-pipeline {
@@ -412,12 +419,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .service-meta {
-    background-color: rgba(66, 103, 178, 0.15);
+    background-color: var(--brand-blue);
     padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-right: 1px solid var(--border-color);
+    color: var(--brand-white);
+}
+
+.service-meta h3 {
+    color: var(--brand-white);
 }
 
 .step-num {
@@ -435,10 +446,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 .service-body {
     padding: 3rem;
+    background-color: var(--brand-white);
 }
 
 .service-body strong {
-    color: var(--brand-yellow);
+    color: var(--brand-blue);
 }
 
 .spec-list {
@@ -467,14 +479,14 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .sub-system {
-    background-color: rgba(14, 26, 52, 0.4);
-    border: 1px solid rgba(255,255,255,0.05);
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-color);
     padding: 1.5rem;
     border-radius: 6px;
 }
 
 .sub-system h5 {
-    color: var(--brand-yellow);
+    color: var(--brand-blue);
     font-size: 1.05rem;
     margin-bottom: 0.5rem;
 }
@@ -487,6 +499,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 /* University Framework Layout */
 .university-section {
     padding: 6rem 0;
+    background-color: rgba(66, 103, 178, 0.02);
 }
 
 .university-container {
@@ -509,8 +522,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .check-item i {
-    color: var(--brand-yellow);
+    color: var(--brand-blue);
     font-size: 1.3rem;
+}
+
+.accent-card {
+    background-color: var(--brand-blue);
+}
+
+.accent-card p {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .mock-data-dots {
@@ -523,7 +544,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.3);
 }
 
 .mock-data-dots .dot.active {
@@ -532,28 +553,34 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 /* Global CTA Bottom Banner */
 .cta-banner {
-    background: linear-gradient(135deg, var(--brand-blue) 0%, #18284E 100%);
+    background: linear-gradient(135deg, var(--brand-blue) 0%, #2E4C8C 100%);
     padding: 6rem 0;
-    border-top: 2px solid var(--brand-yellow);
+    border-top: 4px solid var(--brand-yellow);
+    color: var(--brand-white);
 }
 
 .cta-banner h2 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     letter-spacing: -1px;
+    color: var(--brand-white);
 }
 
 .cta-banner p {
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Footer Section Rules */
 .main-footer {
-    background-color: #0A1224;
+    background-color: #0F1B35; /* Dark navy grounding element */
     padding: 4rem 0 2rem;
-    border-top: 1px solid var(--border-color);
+    color: var(--brand-white);
+}
+
+.main-footer h4 {
+    color: var(--brand-yellow);
 }
 
 .footer-grid {
@@ -563,9 +590,13 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
     margin-bottom: 3rem;
 }
 
+.footer-brand .logo-text {
+    color: var(--brand-white);
+}
+
 .footer-brand p {
     margin-top: 1rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     max-width: 450px;
 }
 
@@ -577,11 +608,10 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 
 .footer-links h4 {
     margin-bottom: 0.5rem;
-    color: var(--text-primary);
 }
 
 .footer-links a {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     transition: var(--transition-smooth);
 }
@@ -591,9 +621,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 2rem;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.5);
     font-size: 0.9rem;
 }
 
@@ -610,7 +640,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
 }
 
 @media (max-width: 768px) {
-    .main-nav { display: none; } /* Simplifies mobile views cleanly */
+    .main-nav { display: none; } 
     .philosophy-grid, .comparison-grid, .sub-systems-grid, .footer-grid { grid-template-columns: 1fr; }
     .comparison-container { padding: 1.5rem; }
 }
