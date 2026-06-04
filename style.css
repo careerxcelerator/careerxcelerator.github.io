@@ -7,8 +7,8 @@
     --brand-blue: #4267B2;
     --brand-yellow: #F5D134;
     --brand-white: #FFFFFF;
-    --dark-canvas: #1A2E56; /* A slightly darker, premium navy variant of your brand blue for text contrast */
-    --surface-card: #F8FAFC; /* Clean white/light gray surface for structural cards */
+    --dark-canvas: #1A2E56; 
+    --surface-card: #F8FAFC; 
     --text-dark: #1E293B;
     --text-muted: #64748B;
     --border-color: rgba(66, 103, 178, 0.2);
@@ -44,6 +44,19 @@ body {
 
 .text-center { text-align: center; }
 h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; color: var(--brand-blue); }
+
+/* Logo Sizing Constraints */
+.main-brand-logo {
+    height: 48px;  /* Optimal visual spacing for modern top navigation headers */
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-logo {
+    height: 42px; /* Slightly scaled down footprint for the bottom footer rows */
+    filter: brightness(0) invert(1); /* Forces your blue/yellow logo to render beautifully as clean pure white against dark footer fills */
+}
 
 /* Reusable UI Components & Buttons */
 .btn {
@@ -155,24 +168,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; color: var(--brand-
     display: flex;
     align-items: center;
     text-decoration: none;
-    gap: 0.75rem;
-}
-
-.nav-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.logo-text {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--brand-blue);
-    letter-spacing: -0.5px;
-}
-
-.logo-text span {
-    color: #DAB51C; /* Darker yellow accent for readability against white logos */
 }
 
 .main-nav {
@@ -574,7 +569,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; color: var(--brand-
 
 /* Footer Section Rules */
 .main-footer {
-    background-color: #0F1B35; /* Dark navy grounding element */
+    background-color: #0F1B35; 
     padding: 4rem 0 2rem;
     color: var(--brand-white);
 }
@@ -588,10 +583,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; color: var(--brand-
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     margin-bottom: 3rem;
-}
-
-.footer-brand .logo-text {
-    color: var(--brand-white);
 }
 
 .footer-brand p {
